@@ -6,14 +6,14 @@ return {
    }),
    font_size = 14.0,
 
+   enable_wayland = true,
+
    harfbuzz_features = { "liga=1" },
 
    window_background_opacity = 0.8,
 
    enable_tab_bar = false,
    hide_tab_bar_if_only_one_tab = true,
-
-   -- color_scheme = "Batman",
 
    colors = {
       -- 8 basic colors (ansi)
@@ -72,4 +72,9 @@ return {
    },
 
    window_close_confirmation = "NeverPrompt",
+
+   keys = {
+      { key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("Clipboard") },
+      { key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("PrimarySelection") },
+   },
 }
