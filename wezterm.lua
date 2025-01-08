@@ -9,7 +9,8 @@ return {
    enable_wayland = true,
 
    harfbuzz_features = { "liga=1" },
-
+   animation_fps = 240,
+   max_fps = 240,
    window_background_opacity = 0.8,
 
    enable_tab_bar = false,
@@ -42,6 +43,7 @@ return {
 
       -- Redefine background and foreground colors
       background = "#131313", -- Dark background -> bg0
+      -- background = "#000000", -- Dark background -> bg0
       foreground = "#ebdbb2", -- Light text -> fg
 
       -- Cursor colors
@@ -65,9 +67,9 @@ return {
    },
 
    window_padding = {
-      left = 0,
-      right = 0,
-      top = 0,
+      left = 5,
+      right = 5,
+      top = 5,
       bottom = 0,
    },
 
@@ -77,4 +79,5 @@ return {
       { key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("Clipboard") },
       { key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("PrimarySelection") },
    },
+   disable_default_key_bindings = true,
 }
